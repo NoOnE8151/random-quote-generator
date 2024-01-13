@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@500&display=swap');
+
+/* removing default padding and maegin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* setting up container's position */
+main {
+  background-color: black;
+  color: #F8F3FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+/* styling quite elements */
+.quoteBox {
+  position: relative;
+  padding: 20px;
+  margin: 50px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 10px 2px #18D26D;
+}
+.quoteBox h2 {
+  font-family: 'Poppins', sans-serif;
+}
+.quoteBox p {
+  font-family: 'Open Sans', sans-serif;
+  margin: 15px 0;
+}
+.btnCont {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#generateBtn {
+  position: relative;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background-color: #18D26D;
+  color: #F8F3FC;
+  text-transform: capitalize;
+  box-shadow: 2px 2px 8px #11974E;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#generateBtn:hover {
+  box-shadow: 4px 3px 8px #1CE48D;
+}
+#generateBtn:active {
+  top: 2px; left: 2px;
+}
+
+/* style quote box shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+.quoteBoxShake {
+  animation: shake 0.5s 1;
+}
+
+/* styling footer */
+footer {
+  position: fixed;
+  left: 0; right: 0; bottom: 25px;
+  color: #F8F3FC;
+  display: flex;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+footer div a {
+  text-decoration: none;
+  color: #18D26D;
+  }
